@@ -1,0 +1,355 @@
+/* general style */
+@font-face {
+    font-family:Montserrat;
+    src: url(../static/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:Poppins;
+    src: url(../static/Poppins/Poppins-Regular.ttf);
+}
+*{
+    font-family:Montserrat ;
+}
+p{
+    font-family:Poppins ;
+}
+.special-heading{
+    font-size: 2.7rem;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.special-heading::after{
+    content: "";
+    position: absolute;
+    width: 12rem;
+    height:1.5rem ;
+    background-image: url(../imgs/dots.png);
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.special-icon{
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: all 0.3s;
+}
+.btn-special {
+    background-color: black;
+    color: white;
+    transition: all .3s;
+}
+ .btn-special:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+/* end of general style */
+
+/* start of navbar */
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: white;
+    font-family:Poppins ;
+    font-size: .9rem;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    position: relative;
+}
+.navbar-nav .nav-link.active::after, .navbar-nav .nav-link.show::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    animation: select 0.5s forwards;
+}
+@keyframes select {
+    from {
+        width: 0%;
+        left: 10%;
+    }
+    to {
+        width: 80%;
+        left: 10%;
+    }
+}
+/* end of navbar */
+
+/* start of hero section  */
+.hero{
+    background-image: url(../imgs/bg.jpg);
+    background-position:0 50%;
+    background-size: cover;
+}
+.hero .layer  h5{
+    font-family: Montserrat;
+    font-size: 3rem;
+}
+.hero .layer  h1{
+    font-family: Montserrat;
+    font-size: 4rem;
+}
+.hero .layer  b::before{
+    content: "";
+    animation:typing 10s infinite ;
+}
+@keyframes typing {
+    0%{ content: "D"; }
+    1.7%{ content: "De"; }
+    3.4%{ content: "Des"; }
+    5.1%{ content: "Desi"; }
+    6.8%{ content: "Desig"; }
+    8.5%{ content: "Design"; }
+    10.2%{ content: "Designe"; }
+    11.9%{ content: "Designer"; }
+    13.6%{ content: "Designe"; }
+    15.3%{ content: "Design"; }
+    17%{ content: "Desig"; }
+    18.7%{ content: "Desi"; }
+    20.4%{ content: "Des"; }
+    22.1%{ content: "De"; }
+    23.8%{ content: "D"; }
+    25.5%{ content: ""; }
+    27.2%{ content: "L"; }
+    28.9%{ content: "La"; }
+    30.6%{ content: "Lar"; }
+    32.3%{ content: "Larr"; }
+    34%{ content: "Larry"; }
+    35.7%{ content: "Larry "; }
+    37.4%{ content: "Larry D"; }
+    39.1%{ content: "Larry Da"; }
+    40.8%{ content: "Larry Dan"; }
+    42.5%{ content: "Larry Dani"; }
+    44.2%{ content: "Larry Danie"; }
+    45.9%{ content: "Larry Daniel"; }
+    47.6%{ content: "Larry Daniels"; }
+    49.3%{ content: "Larry Daniel"; }
+    51%{ content: "Larry Danie"; }
+    52.7%{ content: "Larry Dani"; }
+    54.4%{ content: "Larry Dan"; }
+    56.1%{ content: "Larry Da"; }
+    57.8%{ content: "Larry D"; }
+    59.5%{ content: "Larry "; }
+    61.2%{ content: "Larry"; }
+    62.9%{ content: "Larr"; }
+    64.4%{ content: "Lar"; }
+    66.3%{ content: "La"; }
+    68%{ content: "L"; }
+    69.7%{ content: ""; }
+    71.4%{ content: "D"; }
+    73.1%{ content: "De"; }
+    74.8%{ content: "Dev"; }
+    76.5%{ content: "Deve"; }
+    78.2%{ content: "Devel"; }
+    79.9%{ content: "Develo"; }
+    81.6%{ content: "Develop"; }
+    83.3%{ content: "Develope"; }
+    85%{ content: "Developer"; }
+    86.7%{ content: "Develope"; }
+    88.4%{ content: "Develop"; }
+    90.1%{ content: "Develo"; }
+    91.8%{ content: "Devel"; }
+    93.5%{ content: "Deve"; }
+    95.2%{ content: "Dev"; }
+    96.9%{ content: "De"; }
+    98.6%{ content: "D"; }
+    100%{ content: ""; }
+}
+.hero .layer  .icons .icon{
+    width: 2.3rem;
+    height: 2.3rem;
+}
+/* end of hero section  */
+
+/* start of about section */
+.about img{
+    width: 80%;
+}
+.about .dots{
+    background-image: url(../imgs/dots.png);
+    left: 5%;
+    bottom: -7%;
+    z-index: -1;
+}
+.about h3{
+    font-weight: 800;
+}
+.about span{
+    font-family: Poppins;
+}
+.about .rate .progress-shadow{
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    height: 1.4rem;
+}
+.about .btn {
+    font-size: 14px;
+}
+/* end of about section */
+
+/* start of services section */
+.services .layer:hover .special-icon{
+    background-color: black;
+    color: white;
+}
+/* end of services section */
+
+/* start of portfolio section */
+.nav-tabs .nav-link{
+    color: black;
+    font-weight: 800;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    position: relative;
+}
+.nav-tabs .nav-item.show .nav-link::after, .nav-tabs .nav-link.active::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    animation: select 0.5s forwards;
+}
+@keyframes select {
+    from {
+        width: 0%;
+        left: 10%;
+    }
+    to {
+        width: 80%;
+        left: 10%;
+    }
+}
+.portfolio .white-layer{
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    bottom: 0%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.4s;
+}
+.portfolio .layer:hover .white-layer{
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 2%;
+}
+.portfolio  .icons-group .icon{
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.portfolio  .icons-group .icon:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.portfolio .layer .white-layer  h6{
+    top: 35%;  
+    opacity: 0; 
+    transition: all 0.3s; 
+}
+.portfolio .layer .white-layer  .icons-group{
+    bottom: 35%;
+    opacity: 0; 
+    transition: all 0.3s;
+}
+.portfolio .layer:hover .white-layer  h6{
+    top: 40%;
+    opacity: 1; 
+}
+.portfolio .layer:hover .white-layer  .icons-group{
+    bottom: 40%;
+    opacity: 1; 
+}
+/* end of portfolio section */
+
+/* start of testimonial section */
+.testimonial .special-heading::after{
+    width: 17rem;
+}
+.testimonial .client img{
+    width: 6rem;
+    height: 6rem;
+}
+.testimonial .client p{
+    max-width: 80%;
+}
+.testimonial .client span{
+    font-size: .8rem;
+}
+.carousel-indicators [data-bs-target]{
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background-color: #969696;
+    margin: 0 7px;
+}
+/* end of testimonial section */
+
+/* start of team section */
+.team .special-heading::after{
+    width: 13rem;
+}
+.team .image-item img{
+    transition: all 0.5s;
+}
+.team .image-item:hover img{
+    transform: scale(1.2);
+}
+.team .image-item .special-layer{
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    opacity: 0;
+    transform: scale(.5) rotateY(90deg);
+    background-color: rgba(255, 255, 255,0.9);
+    transition: all 0.5s;
+}
+.team .layer:hover .image-item .special-layer{
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+}
+.team .image-item .special-layer .icons .icon{
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.team .image-item .special-layer .icons .icon:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+/* end of team section */
+
+/* start of contact section  */
+.contact .special-heading::after{
+    width: 15rem;
+}
+.contact .layer:hover .special-icon{
+    background-color: black;
+    color: white;
+}
+.contact form textarea{
+    resize: none;
+}
+/* end of contact section */

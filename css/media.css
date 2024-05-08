@@ -1,0 +1,22 @@
+@media screen and (max-width:992px){
+    /* start of navbar */
+    .navbar-expand-lg .navbar-nav .nav-link{
+        text-align: center;
+        color: black;
+        padding: 1rem 0;
+    }
+    .navbar-nav .nav-link.active::after, .navbar-nav .nav-link.show::after{
+        height: 0;
+    }
+    .navbar-expand-lg  ul{
+        margin-top: 1rem;
+        background-color: white ;
+    }
+    /* end of navbar */
+    /* start of hero section  */
+    .hero .layer  h1{
+        font-size: 2.2rem;
+    }
+    /* end of hero section  */
+}
+
